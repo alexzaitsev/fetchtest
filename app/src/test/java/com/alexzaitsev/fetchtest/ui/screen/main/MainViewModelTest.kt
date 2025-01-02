@@ -1,7 +1,6 @@
 package com.alexzaitsev.fetchtest.ui.screen.main
 
 import app.cash.turbine.test
-import com.alexzaitsev.fetchtest.TestCoroutineRule
 import com.alexzaitsev.fetchtest.data.model.Item
 import com.alexzaitsev.fetchtest.data.repository.ItemsRepository
 import com.github.kittinunf.result.failure
@@ -15,14 +14,10 @@ import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 
 
 class MainViewModelTest {
-    @get:Rule
-    val testCoroutineRule = TestCoroutineRule()
-
     @RelaxedMockK
     private lateinit var itemsRepository: ItemsRepository
     private lateinit var sut: MainViewModel
